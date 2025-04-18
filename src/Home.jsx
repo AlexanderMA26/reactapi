@@ -14,8 +14,9 @@ const Home=()=>{
             .then(res=>{
 
                 let companyName = "Paper";
-                let companyDescription = "We make paper";
+                let companyDescription = "We have eternally unfoldiong A4 paper.";
                 setData({Company: companyName, Description: companyDescription})
+                setColorsData(res.data.data)
                 console.log("Response from api: ", res);
                 console.log("colors data: ", res.data.data)
             })

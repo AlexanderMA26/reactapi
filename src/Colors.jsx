@@ -1,6 +1,6 @@
 import React from "react";
 
-const Colors=()=>{
+const Colors=({data})=>{
     return(
         <>
             {
@@ -9,7 +9,7 @@ const Colors=()=>{
                         <div className="card" key={d.id} style={{background:d.color}}>
 
                         <div className="container">
-                            <h4><b>{d.name}</b></h4>
+                            <h4 style={{color: 'rgb(214, 122, 127)'}}><b>{d.name}</b></h4>
                         </div>
                         </div>
 
