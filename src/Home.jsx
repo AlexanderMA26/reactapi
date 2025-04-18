@@ -9,10 +9,11 @@ const Home=()=>{
         Description:''
     })
     const [colorsData, setColorsData] = useState([])
+    //Grabbing color data from the website
     useEffect(()=>{
         axios.get('https://reqres.in/api/unknown')
             .then(res=>{
-
+                //describing th com
                 let companyName = "Paper";
                 let companyDescription = "We have eternally unfoldiong A4 paper.";
                 setData({Company: companyName, Description: companyDescription})
@@ -25,7 +26,9 @@ const Home=()=>{
             })
     },[])
     return(
+        //Printing out company info and showing color cards
         <>
+    
         <h1>{Data.Company}</h1>
         <p>{Data.Description}</p>
         <Colors data={colorsData}/>
